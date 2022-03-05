@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="zsjh01.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Text text = "Hello World"
+                              textAlign = "Center"
+                              width = "250px">
+                        </Text>
+                        <Button
+                            id="BadgedButton"
+                            class="sapUiTinyMarginBeginEnd"
+                            icon="sap-icon://cart"
+                            type="Default"
+                            text="Button with Badge"
+                            press=".onShowHello">
+                            <customData>
+                                <BadgeCustomData
+                                    key="badge"
+                                    value=""
+                                    visible=""/>
+                            </customData>
+                        </Button>
+
+                        <Input
+                            id="productInput"
+                            placeholder="Enter Text"
+                            value="{/recipient/name}"
+                            description="Hello {/recipient/name}"
+                            valueLiveUpdate="true"
+                            width="60%">
+                        </Input>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
